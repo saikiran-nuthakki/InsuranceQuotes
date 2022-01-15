@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body align=center>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><legend><h1>Insurance Quotes</h1></legend></div>
+			<div class="col-md-4"></div>
+		</div>
+			<br>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form class="form-horizontal" action={{url_for('calc.result1')}}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_4">First Name:</label>
+						<div class="col-xs-7">
+							<input type="text" class="form-control" name="var_4" placeholder="&nbsp;First Name&nbsp;">
+						</div>
+					</div>
+				<form class="form-horizontal" action={{url_for('calc.result1')}}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_3">Last Name:</label>
+						<div class="col-xs-7">
+							<input type="text" class="form-control" name="var_3" placeholder="&nbsp;Last Name&nbsp;">
+						</div>
+					</div>
+				<form class="form-horizontal" action={{url_for('calc.result1')}}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_2">ZIP:</label>
+						<div class="col-xs-7">
+							<input type="text" class="form-control" name="var_2" placeholder="&nbsp;XXXXX&nbsp;">
+						</div>
+					</div>
+				<form class="form-horizontal" action={{url_for('calc.result1')}}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_1">Date of Birth (YYYY-MM-DD):</label>
+						<div class="col-xs-7">
+							<input type="text" class="form-control" name="var_1" placeholder="&nbsp;YYYY-MM-DD&nbsp;">
+						</div>
+					</div>
+					<div class="form-group">
+            			<label class="control-label col-xs-3">Operation:</label>
+            			<div class="col-xs-5">
+                			<select class="form-control" name="operation">
+                    			<option>Get Quote</option>
+								<option>Lookup Quote</option>
+								<option> Display Quotes Issued in the Last 24 Hours</option>
+								<option> Get Premium</option>
+                			</select>
+            			</div>
+            		</div>
+					<div class="form-group">
+            			<div class="col-xs-offset-3 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Submit">
+                			<input type="reset" class="btn btn-danger" value="Reset">
+            			</div>
+        			</div>
+        		</form>
+        	</div>
+        	<div class="col-md-4"></div></div>
+		</div>
+	</body>
+</html>
